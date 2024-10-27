@@ -1,0 +1,74 @@
+{
+    "data":[
+        
+            {
+                "id": 1,
+                "name": "Vegetarian"
+            },
+            {
+                "id": 2,
+                "name": "Low Carb"
+            },
+            {
+                "id": 3,
+                "name": "High Prottein"
+            },
+            {
+                "id": 4,
+                "name": "Grilled"
+            },
+            {
+                "id": 5,
+                "name": "Sweet"
+            },
+            {
+                "id": 6,
+                "name": "Chocolate Lover"
+            },
+            {
+                "id": 7,
+                "name": "Healthy"
+            },
+            {
+                "id": 8,
+                "name": "Warm"
+            },
+            {
+                "id": 9,
+                "name": "Comfort Food"
+            },
+            {
+                "id": 10,
+                "name": "Low Fat"
+            },
+            {
+                "id": 11,
+                "name": "Crunchy"
+            },
+            {
+                "id": 13,
+                "name": "Fast Food"
+            },
+            {
+                "id": 14,
+                "name": "Quick Bite"
+            },
+            {
+                "id": 15,
+                "name": "Creamy"
+            },
+            {
+                "id": 16,
+                "name": "Protein Rich"
+            },
+            {
+                "id": 17,
+                "name": "Fruity"
+            },
+            {
+                "id": 18,
+                "name": "Spicy"
+            }
+        
+    ]
+}

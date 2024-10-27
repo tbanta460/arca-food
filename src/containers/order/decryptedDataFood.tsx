@@ -2,7 +2,7 @@ import React from "react";
 import CryptoJS from "crypto-js";
 import Cookies from "js-cookie";
 import { secretCookie, secretKey } from "./modals/ModalDetailFood";
-const useDecryptedDataFood = () => {
+const decryptedDataFood = () => {
     const dataFood = localStorage.getItem(secretCookie);
     const bytes = CryptoJS.AES.decrypt(dataFood ?? "", secretKey);
 
@@ -12,4 +12,4 @@ const useDecryptedDataFood = () => {
     return decryptedObject;
 }
 
-export default useDecryptedDataFood
+export default decryptedDataFood

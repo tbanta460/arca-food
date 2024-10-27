@@ -1,10 +1,9 @@
 "use client"
 import { ReactQueryProvider } from "@/store/queryProvider";
 import { ToastContainer } from "react-toastify";
-import { Box, ChakraProvider, Text, Container, Image } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container, Image } from "@chakra-ui/react";
 import { theme } from "@/theme";
-import dynamic from 'next/dynamic';
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import { useDisclosure } from "@chakra-ui/react";
 // import { UserDataProvider } from "@/store/provider/UserData";
 // import AccessControl, { AuthRestrict } from "@/components/AccessControl";
@@ -38,7 +37,7 @@ export default function Main({
                     {isOpen && <ModalCart isOpen={isOpen} onClose={onClose}/>}
                     {children}
                     <Box position={"fixed"} right="20px" bottom="30px" cursor={"pointer"} onClick={onOpen}>
-                        <Image src="./basket.png" width={"100px"} />
+                        <Image src="./basket.png" width={"100px"} alt="cart icn"/>
                     </Box>
                 </Container>
 

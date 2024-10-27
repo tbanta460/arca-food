@@ -3,9 +3,9 @@ import { Image, Modal, ModalBody, ModalFooter, ModalOverlay, ModalContent, Modal
 import { formatCurrency } from "@/helper/formatCurrency";
 import CryptoJS from "crypto-js";
 import Cookies from "js-cookie";
-import useDecryptedDataFood from "../useDecryptedDataFood";
+import decryptedDataFood from "../decryptedDataFood";
 import { toast } from "react-toastify";
-import useGenerateUniqueCartId from "../useGenerateUniqueCartId";
+import generateUniqueCartId from "../generateUniqueCartId";
 // Key penting saya sengaja tidak taruh di .env karena untuk menghemat waktu;
 export const secretKey: string = "SSPhSLnmn295SSfx25LJKwopzn55617d"
 export const secretCookie: string = "AQlfkSwAAf3014rdkZXC"
@@ -19,9 +19,9 @@ const ModalDetailFood = ({ isOpen, onClose, dataFood, setDataDetailForFood }: In
     const [count, setCount] = useState<number>(1);
     // const dataFoodDecrypted: { [key: string]: any } | null = useDecryptedDataFood();
     const handleAddToCart = () => {
-        const dataFoodDecrypted: { [key: string]: any } | null = useDecryptedDataFood();
+        const dataFoodDecrypted: { [key: string]: any } | null = decryptedDataFood();
         dataFood.qty = count
-        const orderId = useGenerateUniqueCartId();
+        const orderId = generateUniqueCartId();
         dataFood.orderId = orderId
         const dataToCookies = {
             data: dataFoodDecrypted === null ? [dataFood] : [...dataFoodDecrypted?.data, dataFood]

@@ -1,8 +1,8 @@
-import React, { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react"
+import React, { Fragment, useEffect, useState } from "react"
 import { Image, Modal, ModalBody, ModalFooter, ModalOverlay, ModalContent, ModalCloseButton, ModalHeader, Button, Text, Heading, Box, Stack, Flex, Divider } from "@chakra-ui/react";
 import { formatCurrency } from "@/helper/formatCurrency";
 import CryptoJS from "crypto-js";
-import useDecryptedDataFood from "@/containers/order/useDecryptedDataFood";
+import useDecryptedDataFood from "@/containers/order/decryptedDataFood";
 import { toast } from "react-toastify";
 // Key penting saya sengaja tidak taruh di .env karena untuk menghemat waktu;
 import { secretCookie, secretKey } from "@/containers/order/modals/ModalDetailFood";

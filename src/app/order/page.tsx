@@ -1,6 +1,6 @@
 "use client"
-import { Container, Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { Text } from "@chakra-ui/react";
+import React, {  useState } from "react";
 import OrderSingleIndex from "@/containers/order/OrderSingleIndex";
 import useFoodListIndex from "@/store/api/useFoodListIndex";
 

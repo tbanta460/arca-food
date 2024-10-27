@@ -2,12 +2,12 @@ import React, { Fragment, useState } from "react";
 import { Grid, Card, CardBody, ButtonGroup, Button, Text, Image, CardFooter, Stack, Divider, Heading, useDisclosure } from "@chakra-ui/react";
 import { formatCurrency } from "@/helper/formatCurrency";
 import ModalDetailFood from "./modals/ModalDetailFood";
-import useDecryptedDataFood from "./useDecryptedDataFood";
+import decryptedDataFood from "./decryptedDataFood";
 import CryptoJS from "crypto-js";
 import Cookies from "js-cookie";
 import { secretCookie, secretKey } from "./modals/ModalDetailFood";
 import { toast } from "react-toastify";
-import useGenerateUniqueCartId from "./useGenerateUniqueCartId";
+import generateUniqueCartId from "./generateUniqueCartId";
 interface InitialPropsCardFood {
     dataFoods: Array<{ [key: string]: any }>;
 }
@@ -21,8 +21,8 @@ const CardFood = ({ dataFoods }: InitialPropsCardFood) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [dataDetailForFood, setDataDetailForFood] = useState<initialDataDetail | null>(null);
     const handleAddToCart = async (dataFood: { [key: string]: any }) => {
-        const dataFoodDecrypted: { [key: string]: any } | null = await useDecryptedDataFood();
-        const orderId = useGenerateUniqueCartId();
+        const dataFoodDecrypted: { [key: string]: any } | null = await decryptedDataFood();
+        const orderId = generateUniqueCartId();
         dataFood.qty = 1;
         dataFood.orderId = orderId
         const dataToCookies = {
